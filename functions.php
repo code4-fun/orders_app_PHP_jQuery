@@ -45,3 +45,8 @@ function create_order($data){
   return mysqli_insert_id($db);
 }
 
+function delete_order($id){
+  global $db;
+  $query = "delete from `order` where id = '$id'";
+  return mysqli_query($db, $query);
+}

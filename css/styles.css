@@ -116,6 +116,7 @@ body {
   margin: 0 0 15px 0;
 }
 .orderItem {
+  position: relative;
   border: 2px solid #252B42;
   border-radius: 50px;
 }
@@ -124,10 +125,12 @@ body {
   text-decoration: inherit;
 }
 .orderItem__body {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
+  z-index: 1;
 }
 .orderItem__body:hover {
   cursor: pointer;
@@ -146,7 +149,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 0 20px;
+  margin: 0 65px 0 20px;
 }
 .orderItem__text {
   font-weight: 500;
@@ -162,14 +165,23 @@ body {
   color: #ef0a0a;
 }
 .orderItem__delete {
-  margin-right: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
 }
-.orderItem__delete img {
+.orderItem__delete--input {
+  position: relative;
   width: 25px;
   filter: invert(10%) sepia(18%) saturate(405%) hue-rotate(169deg) brightness(102%) contrast(92%);
+  box-sizing: content-box;
+  padding: 8px;
+  margin-right: 20px;
+  z-index: 2;
 }
 /*----------------------ORDER------------------------------*/
 .card {
@@ -297,11 +309,6 @@ textarea.popup-input {
 .popup-inner .popup-errors > :not(:last-child) {
   margin: 0 0 10px 0;
 }
-
-
-
-
-
 
 
 

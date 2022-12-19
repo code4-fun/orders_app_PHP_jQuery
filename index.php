@@ -17,22 +17,25 @@
       </div>
       <div class="orderList">
         <?php foreach($orders as $order): ?>
-          <div class='orderItem'>
+          <div class='orderItem' id="order_<?= $order['id'] ?>">
             <a href="order.php?id=<?= $order['id'] ?>"
                class="orderItem__link">
               <div class='orderItem__body'>
                 <div class='orderItem__content'>
                   <div class='orderItem__text'><?= date('Y/m/d', strtotime($order['date'])) ?></div>
                   <div class='orderItem__text'><?= $order['name'] ?></div>
-                  <div class='orderItem__text <?= $order['paid'] ? 'orderItem__text--paid' : 'orderItem__text--unpaid' ?>'><?= $order['sum'] ?></div>
-                </div>
-                <div class='orderItem__delete'>
-                  <img onclick="event => {event.stopPropagation(); remove(item);}"
-                       src="img/trash.svg"
-                       alt="delete" />
+                  <div class='orderItem__text <?= $order['paid'] ? 'orderItem__text--paid' : 'orderItem__text--unpaid' ?>'>
+                    <?= $order['sum'] ?></div>
                 </div>
               </div>
             </a>
+            <div class="orderItem__delete">
+              <form method="post" onsubmit="event.preventDefault(); deleteOrder(<?= $order['id'] ?>);">
+                <input type="image"
+                       src='img/trash.svg'
+                       class="orderItem__delete--input">
+              </form>
+            </div>
           </div>
         <?php endforeach; ?>
       </div>
