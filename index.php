@@ -5,14 +5,15 @@
 
   <?php if(!empty($orders)): ?>
     <div class="main">
-      <div class='orderItem'>
+      <div class='list-scroll-hider'>
+      </div>
+      <div class='orderItem orderItem--header'>
         <div class='orderItem__body orderItem__body--header'>
           <div class='orderItem__content'>
             <div class='orderItem__text orderItem__text--header'>Date</div>
-            <div class='orderItem__text orderItem__text--header'>Client</div>
+            <div class='orderItem__text orderItem__text--header orderItem__text--client'>Client</div>
             <div class='orderItem__text orderItem__text--header orderItem__text--sum'>Sum</div>
           </div>
-          <div class='orderItem__delete'></div>
         </div>
       </div>
       <div class="orderList">
@@ -22,9 +23,9 @@
                class="orderItem__link">
               <div class='orderItem__body'>
                 <div class='orderItem__content'>
-                  <div class='orderItem__text'><?= date('Y/m/d', strtotime($order['date'])) ?></div>
-                  <div class='orderItem__text'><?= $order['name'] ?></div>
-                  <div class='orderItem__text <?= $order['paid'] ? 'orderItem__text--paid' : 'orderItem__text--unpaid' ?>'>
+                  <div class='orderItem__text orderItem__text--date'><?= date('Y/m/d', strtotime($order['date'])) ?></div>
+                  <div class='orderItem__text orderItem__text--client'><?= $order['name'] ?></div>
+                  <div class='orderItem__text orderItem__text--sum <?= $order['paid'] ? 'orderItem__text--paid' : 'orderItem__text--unpaid' ?>'>
                     <?= $order['sum'] ?></div>
                 </div>
               </div>
@@ -50,7 +51,7 @@
             $unpaid += !$order['paid'] ? (int)$order['sum'] : 0;
           }
         ?>
-        <div class='card'>
+        <div class='card card__statistics'>
           <div class='card__body'>
             <div class='card__content'>
               <div class="card__column card__column--header">

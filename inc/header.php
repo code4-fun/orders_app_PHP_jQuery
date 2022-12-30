@@ -23,13 +23,22 @@ require_once('functions.php');
           <img src='img/logo.png' alt='cover'/>
         </a>
       </div>
+      <div class="header__burger">
+        <span></span>
+      </div>
+      <div class="header__menu--outer">
+        <div class="header__menu--inner">
+          <div class='header__menu--link create-order-button'>Create new order</div>
+        </div>
+      </div>
       <div class='header__menu menu'>
         <ul class='menu__list'>
           <li class='menu__item'>
-            <div class='menu__link comment-button'>Create new order</div>
+            <div class='menu__link create-order-button'>Create new order</div>
           </li>
         </ul>
       </div>
+
     </div>
   </header>
   <div class="page">

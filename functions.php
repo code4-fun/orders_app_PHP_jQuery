@@ -34,12 +34,12 @@ function fetch_all_clients(){
 }
 
 function create_order($data){
+  global $db;
   $date = $data['date'];
-  $description = $data['description'];
+  $description = mysqli_real_escape_string($db, $data['description']);
   $sum = $data['sum'];
   $paid = $data['paid'];
   $user_id = $data['clientId'];
-  global $db;
   $query = "insert into `order`(date, description, sum, paid, user_id) values('$date', '$description', '$sum', '$paid', '$user_id')";
   mysqli_query($db, $query);
   return mysqli_insert_id($db);

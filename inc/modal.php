@@ -18,8 +18,8 @@
       </div>
       <input type="text" class="popup-input" name="sum" placeholder='Sum'>
       <div class="popup-checkbox-wrapper">
-        <label for="paid" class="popup-checkbox-label">Paid</label>
-        <input type="checkbox" class="popup-checkbox" name="paid" placeholder='Paid'>
+        <label for="paid-checkbox" class="popup-checkbox-label">Paid</label>
+        <input type="checkbox" class="popup-checkbox" name="paid" id="paid-checkbox" placeholder='Paid'>
       </div>
       <button class="popup-button">Create</button>
     </form>
