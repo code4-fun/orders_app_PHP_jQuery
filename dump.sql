@@ -41,7 +41,7 @@ CREATE TABLE `order` (
 
 LOCK TABLES `order` WRITE;
 /*!40000 ALTER TABLE `order` DISABLE KEYS */;
-INSERT INTO `order` VALUES (1,'2022-12-03 14:09:16','description of order 1',345,1,1),(2,'2022-12-08 14:00:00','description of order 2',5634,1,2),(3,'2022-12-08 14:00:00','description of order 3',981,0,3),(4,'2022-12-04 14:00:00','description of order 4',576,1,2),(5,'2022-12-09 14:00:00','description of order 5',275,1,1),(6,'2022-12-06 14:00:00','description of order 6',784,1,3),(7,'2022-12-10 14:00:00','description of order 7',689,0,4),(8,'2022-12-07 14:00:00','description of order 8',5743,0,4),(9,'2022-12-14 14:00:00','description of order 9',327,0,2),(10,'2022-12-14 14:00:00','description of order 10',2594,0,4);
+INSERT INTO `order` VALUES (1,'2022-12-03 00:00:00','description of order 1',345,1,1),(2,'2022-12-08 00:00:00','description of order 2',5634,1,2),(3,'2022-12-08 00:00:00','description of order 3',981,0,3),(4,'2022-12-04 00:00:00','description of order 4',576,1,2),(5,'2022-12-09 00:00:00','description of order 5',275,1,1),(6,'2022-12-06 00:00:00','description of order 6',784,1,3),(7,'2022-12-10 00:00:00','description of order 7',689,0,4),(8,'2022-12-07 00:00:00','description of order 8',5743,0,4),(9,'2022-12-14 00:00:00','description of order 9',327,0,2),(10,'2022-12-14 00:00:00','description of order 10',2594,0,4);
 /*!40000 ALTER TABLE `order` ENABLE KEYS */;
 UNLOCK TABLES;
 
