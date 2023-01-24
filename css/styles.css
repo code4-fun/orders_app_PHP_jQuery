@@ -199,7 +199,7 @@ img {
   background: rgba(107, 117, 125, 1);
   z-index: 3;
   /*border: 1px solid #252B42;*/
-  padding: 18px;
+  padding: 23px;
 }
 .orderItem--header {
   position: fixed;
